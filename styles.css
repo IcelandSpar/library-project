@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.main-container {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 5rem;
+    max-width: 20rem;
+    padding: 20px 50px;
+    font-size: 2rem;
+    background-color: blueviolet;
+    font-weight: bold;
+    color: whitesmoke;
+    border-radius: 15px;
+    border: 6px solid;
+    box-shadow: black 5px 5px;
+    border-color: rgb(114, 36, 187);
+    grid-column: 2 / 3;
+    align-self: center;
+}
+
+button:hover {
+cursor: pointer;
+
+}
+
+
+
+th {
+    padding: 10px;
+}
+
+.table {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    border: 3px solid black;
+    border-radius: 7px;
+    font-size: 1.5rem;
+}
+
+
+
+td {
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
