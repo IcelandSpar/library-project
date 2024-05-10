@@ -61,7 +61,36 @@ const dialog = document.querySelector(".dialog")
 
   const newBookBtn = document.querySelector('.newBookBtn')
 
-  newBookBtn.addEventListener('click', () => {
-dialog.showModal();
+    newBookBtn.addEventListener('click', () => {
+    dialog.showModal();
+
+    form.reset();
+  })
+
+
+
+
+  const addBookBtn = document.querySelector("button[value=save]");
+  
+
+
+  addBookBtn.addEventListener("click", (evt) => {
+    
+    evt.preventDefault();
+
+    dialog.close();
+
+    const newBook = new Book(title.value, author.value, pages.value, read.value);
+
+    const tableRow = document.createElement("tr");
+    const tableData = document.createElement("td");
+    
+    const table = document.querySelector(".table");
+
+
+    table.appendChild(tableRow);
+    tableRow.appendChild(tableData);
+    tableData.textContent = newBook.info();
     
   })
+

@@ -25,7 +25,7 @@
     </div>
 
     <dialog class="dialog">
-        <form id="book-form">
+        <form id="form" method="post">
             
             <label><h1>New Book Form</h1></label>
 
@@ -40,15 +40,16 @@
             <input type="text" id="pages" name="pages" required>
 
             <label for="read">Have you read this book?</label>
-            <select id="read" name="read" form="book-form" required>
+            <select id="read" name="read" form="form" required>
                 <option value="read">Read</option>
                 <option value="not read">Not Read</option>
             </select>
             
-            <button type="button">Submit</button>
+            <button class="addBookBtn" form="form" value="save">Submit</button>
 
 
         </form>
+        <output id="output"></output>
 
 
 
