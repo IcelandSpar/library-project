@@ -21,7 +21,37 @@
 
         </table>
 
-        </div>
+
     </div>
+
+    <dialog class="dialog">
+        <form id="book-form">
+            
+            <label><h1>New Book Form</h1></label>
+
+
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="pages">Pages</label>
+            <input type="text" id="pages" name="pages" required>
+
+            <label for="read">Have you read this book?</label>
+            <select id="read" name="read" form="book-form" required>
+                <option value="read">Read</option>
+                <option value="not read">Not Read</option>
+            </select>
+            
+            <button type="button">Submit</button>
+
+
+        </form>
+
+
+
+    </dialog>
 </body>
 </html>

@@ -55,13 +55,13 @@ function Book(title, author, pages, read) {
   looper();
 
 
-
+const dialog = document.querySelector(".dialog")
 
 
 
   const newBookBtn = document.querySelector('.newBookBtn')
 
   newBookBtn.addEventListener('click', () => {
-
+dialog.showModal();
     
   })

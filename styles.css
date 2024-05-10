@@ -9,7 +9,7 @@
     margin-top: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
 }
 
 button {
@@ -57,3 +57,39 @@ td {
     border-radius: 7px;
     padding: 10px;
 }
+
+.dialog {
+    
+    position: absolute;
+    margin: auto;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+input, select {
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+form h1 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+ form > label {
+    margin-bottom: 10px;
+ }
+
+ [type="text"], select {
+    font-size: 1.2rem;
+ }
+
+ form > button {
+    margin: 20px 0px;
+ }
