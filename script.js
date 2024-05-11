@@ -11,6 +11,10 @@ function Book(title, author, pages, read) {
     }
   }
 
+
+
+
+
   function addBookToLibrary() {
     const formContainer = document.querySelector('.formContainer');
     const newForm = document.createElement("div");
@@ -139,9 +143,15 @@ exitBtn.addEventListener("click", () => {
     
     evt.preventDefault();
 
+    
+if (title.value == "" || author.value == "" || pages.value == "") {
     dialog.close();
-
+} else {
+    dialog.close();
     const newBook = new Book(title.value, author.value, pages.value, read.value);
+
+    
+    
 
     const tableRow = document.createElement("tr");
     const tableDataTitle = document.createElement("th");
@@ -171,10 +181,16 @@ exitBtn.addEventListener("click", () => {
     const tableDataBtnContainer = document.createElement("td");
     const tableReadBtn = document.createElement("button");
 
+
+    
+
+
     tableRow.appendChild(tableDataRead);
     
 
     
+
+
     tableDataRead.textContent = newBook.read;
     tableRow.appendChild(tableDataBtnContainer);
     tableDataBtnContainer.appendChild(tableReadBtn);
@@ -183,10 +199,14 @@ exitBtn.addEventListener("click", () => {
     tableReadBtn.style.cssText = "padding: 12px 1ch; font-size: 1.5rem; font-family: 'Comic Neue'; border-radius: 10px;"
 /////////////////////////
     tableReadBtn.addEventListener("click", () => {
-      if (tableDataRead.textContent == "read") {
-        tableDataRead.textContent = "not read";
+      if (newBook.read == "read") {
+        newBook.read = "not read"
+        tableDataRead.textContent = newBook.read;
+        
       } else {
+        newBook.read = "read"
         tableDataRead.textContent = "read";
+        
       }
     //////////////////////////////
     })
@@ -208,7 +228,7 @@ exitBtn.addEventListener("click", () => {
       table.removeChild(tableRow);
     })
 
-
+}
     
   })
 
