@@ -5,14 +5,25 @@
     
 }
 
+@font-face {
+    .comic-neue-bold {
+        font-family: "Comic Neue", cursive;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+}
+
 .main-container {
-    margin-top: 10vh;
+    margin-top: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .5fr 1fr;
+    font-family: "Comic Neue";
+    
 }
 
-button {
+.newBookBtn, .addBookBtn {
     margin-left: auto;
     margin-right: auto;
     max-height: 5rem;
@@ -35,13 +46,18 @@ cursor: pointer;
 
 }
 
-
+.newBookBtn {
+    margin-bottom: 20px;
+}
 
 th {
     padding: 10px;
+
 }
 
 .table {
+    width: 50vw;
+    box-sizing: border-box;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 
@@ -50,19 +66,31 @@ th {
     font-size: 1.5rem;
 }
 
+.table-header th {
+    border-bottom: 1px solid black;
+}
 
 
 td {
-    border: 2px solid black;
-    border-radius: 7px;
+
     padding: 10px;
 }
 
+tr:nth-child(odd) {
+background-color: rgb(218, 213, 213);
+
+}
+
+
+
+
+
 .dialog {
-    
+    border-radius: 7px;
     position: absolute;
     margin: auto;
-
+    width: 35vw;
+    min-width: 300px;
 }
 
 form {
@@ -70,6 +98,8 @@ form {
     flex-direction: column;
     padding: 15px;
     font-size: 1.2rem;
+    font-family: "Comic Neue";
+    align-items: center;
 }
 
 input, select {
@@ -86,15 +116,23 @@ form h1 {
     margin-bottom: 10px;
  }
 
- [type="text"], select {
+ [type="text"], select, [type="tel"] {
     font-size: 1.2rem;
-    
+    max-width: 400px;
  }
 
  [type="text"] {
     padding-left: 1ch;
  }
 
+ [type="tel"] {
+    padding-left: 1ch;
+ }
+
  form > button {
     margin: 20px 0px;
+ }
+
+ .exitBtn {
+    padding: .7rem 3rem;
  }

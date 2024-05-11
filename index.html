@@ -6,14 +6,24 @@
     <title>Project: Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="main-container">
         <button type="button" class="newBookBtn">NEW BOOK</button>
         <table class="table">
-            <tr>
-                <th>Book Info</th>
+            <tr class="table-header">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read or Not Read</th>
+                <th>Change Read Status</th>
+                <th>Remove Book</th>
+                
             </tr>
 
             
@@ -37,7 +47,7 @@
             <input type="text" id="author" name="author" required>
 
             <label for="pages">Pages</label>
-            <input type="text" id="pages" name="pages" required>
+            <input type="tel" id="pages" name="pages" required>
 
             <label for="read">Have you read this book?</label>
             <select id="read" name="read" form="form" required>
@@ -46,6 +56,7 @@
             </select>
             
             <button class="addBookBtn" form="form" value="save">Submit</button>
+            <button class="exitBtn" type="button">Exit</button>
 
 
         </form>
