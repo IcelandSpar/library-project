@@ -1,12 +1,15 @@
 
 
 
-function Book(title, author, pages, read) {
+class Book {
+  constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.info = function() {
+  }
+
+    info() {
       return `${this.title}, by ${this.author} is ${this.pages} pages long, and I have ${this.read} this book.`
     }
   }
@@ -15,15 +18,7 @@ function Book(title, author, pages, read) {
 
 
 
-  function addBookToLibrary() {
-    const formContainer = document.querySelector('.formContainer');
-    const newForm = document.createElement("div");
-  
-    newForm.style.cssText = 'color: green;'
-    newForm.textContent = 'Hello World'
-    formContainer.appendChild(newForm)
-  
-  }
+
 
 
   const againstTheDay = new Book("Against The day", "Thomas Pynchon", 1805, "read");
